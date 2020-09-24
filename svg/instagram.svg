@@ -1,0 +1,19 @@
+<svg id="iconfinder_25_social_2609558" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89.783" height="89.783" viewBox="0 0 89.783 89.783">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.293" cy="1.077" r="1.325" gradientTransform="translate(0 0)" gradientUnits="objectBoundingBox">
+      <stop offset="0.097" stop-color="#ffd87a"/>
+      <stop offset="0.143" stop-color="#fcce78"/>
+      <stop offset="0.226" stop-color="#f5b471"/>
+      <stop offset="0.338" stop-color="#eb8d65"/>
+      <stop offset="0.449" stop-color="#e36058"/>
+      <stop offset="0.679" stop-color="#cd3694"/>
+      <stop offset="1" stop-color="#6668b0"/>
+    </radialGradient>
+  </defs>
+  <path id="Path_66" data-name="Path 66" d="M89.783,69.284a20.491,20.491,0,0,1-20.5,20.5H20.5A20.491,20.491,0,0,1,0,69.284V20.517A20.521,20.521,0,0,1,20.517,0H68.968A20.805,20.805,0,0,1,89.783,20.815Z" fill="url(#radial-gradient)"/>
+  <g id="Group_19" data-name="Group 19" transform="translate(12.363 12.38)">
+    <path id="Path_67" data-name="Path 67" d="M115.514,70.6H90.543A20.049,20.049,0,0,0,70.5,90.643V115.6a20.023,20.023,0,0,0,20.043,20.026H115.5A20.019,20.019,0,0,0,135.523,115.6V90.643A20,20,0,0,0,115.514,70.6ZM129.3,113.194a16.18,16.18,0,0,1-16.186,16.186H92.946A16.18,16.18,0,0,1,76.76,113.194V93.028A16.18,16.18,0,0,1,92.946,76.843h20.166A16.191,16.191,0,0,1,129.3,93.028Z" transform="translate(-70.5 -70.6)" fill="#fff"/>
+    <path id="Path_68" data-name="Path 68" d="M180.432,159a17.132,17.132,0,1,0,17.132,17.132A17.123,17.123,0,0,0,180.432,159Zm0,27.426a10.311,10.311,0,1,1,10.311-10.311A10.305,10.305,0,0,1,180.432,186.426Z" transform="translate(-147.027 -143.498)" fill="#fff"/>
+    <path id="Path_69" data-name="Path 69" d="M335.8,136.966a4.349,4.349,0,1,1-4.349-4.366A4.348,4.348,0,0,1,335.8,136.966Z" transform="translate(-282.103 -121.728)" fill="#fff"/>
+  </g>
+</svg>
