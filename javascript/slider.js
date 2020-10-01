@@ -36,29 +36,29 @@ const places = [
 ]
 
 const sectionTitle = document.getElementById('section-title');
-const sectionImage = document.getElementById('image');
+const sectionImage = document.querySelector('.image');
 const sectionNote = document.getElementById('section-note');
-const imageLocation = document.getElementById('image-location');
-const place = document.getElementById('place');
+const locationImage = document.querySelector('.location-img');
+const locationPlace = document.getElementById('location-place');
+
 let count = 0;
 
-
-const categorySlider = (title, image, note) => {
-  sectionImage.src = image;
-  sectionTitle.innerText = title;
-  sectionNote.innerText = note;
-  count++;
+const categorySlider = (title, image, note)=> {
+  sectionTitle.textContent = title;
+  sectionImage.style.backgroundImage = `url( ${image} )`;
+  sectionNote.textContent = note;
 }
 
-const locationSlider = (title, image) => {
-  place.innerText = title;
-  imageLocation.src = image;
+const locationSlider = (place, image)=> {
+  locationPlace.textContent = place;
+  locationImage.style.backgroundImage = `url( ${image} )`;
 }
 
-setInterval(() => {
-  if(count > (category.length)-1) {
-    count = 0;
-  }
+setInterval(()=> {
   categorySlider(category[count][0], category[count][1], category[count][2]);
   locationSlider(places[count][0], places[count][1]);
+  count++;
+  if( count >= category.length ) {
+    count = 0;
+  }
 }, 3000)

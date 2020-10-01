@@ -5,15 +5,15 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* body {
-  background: #3F3D56;
-} */
-
 .container {
   width: 90vw;
-  /* height: 365vh; */
-  height: 350vh;
   margin: 0 auto;
+  transition: 0.5s ease;
+}
+
+.container.blur {
+  filter: blur(5px);
+  transition: 0.5s ease;
 }
 
 .navigation {
@@ -28,7 +28,6 @@
   background: -webkit-linear-gradient(#172f38, #1BA391, #172f38);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* animation: change 1s infinite ease-in-out; */
   animation-name: change;
   animation-duration: 1s;
   animation-delay: 0s;
@@ -171,32 +170,22 @@
   transition: 0.6s ease;
 }
 
-.have .image {
+.have .carousel {
+  box-shadow: .5px .5px 10px .5px rgb(0, 0, 0);
   width: 40vw;
   height: 20rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   margin-left: 3rem;
   transition: 0.6s ease;
 }
 
-/* .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.have .carousel .image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
 }
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-} */
 
 .provide {
   margin-top: 3rem;
@@ -265,10 +254,6 @@ ul li:before {
 	width: .75rem;
 }
 
-.location {
-  position: relative;
-}
-
 .location .title{
   display: flex;
   align-items: center;
@@ -276,38 +261,42 @@ ul li:before {
   margin: 3rem 0 1rem 0;
 }
 
-.location img {
+.location .location-icon {
+  margin-left: 1rem;
+}
+
+.location .slider {
   width: 100%;
   height: 75vh;
+  box-shadow: .5px .5px 10px .5px rgb(0, 0, 0);
+  transition: 0.6s ease;
+}
+
+.location .slider .location-img {
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: .85;
 }
 
-.location h1 {
-  position: absolute;
+.location .slider h1 {
+  position: relative;
+  left: 50%;
+  bottom: calc(75vh / 2);
+  display: inline-block;
+  transform: translate(-50%, -50%);
   font-size: 5rem;
   color: #3bffe5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.location .location-icon {
-  margin-left: 1rem;
 }
 
 .footer {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
   background: #05C7AE;
   height: 50vh;
-   position: relative;
-  bottom: 0;
-  top: 5rem;
-  /*margin-top: 2rem; */
+  margin-top: 1rem;
 }
 
 .icons {
@@ -339,12 +328,170 @@ ul li:before {
 
 .for-you a{
   text-decoration: none;
-  color: black;
+  color: #3F3D56;
   display: block;
   margin-top: 1rem;
+  font-weight: bold;
 }
 
 .greet {
   font-size: 4rem;
   margin-top: 1rem;
+}
+
+.login-container, .signup-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login-container.display {
+  display: flex;
+}
+
+.signup-container.display {
+  display: flex;
+}
+
+.login-form, .signup-form {
+  background: #3F3D56;
+  width: 30vw;
+  height: 75vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  border-radius: .5rem;
+  box-shadow: .5px .5px 10px .5px rgb(0, 0, 0);
+}
+
+.signup-form {
+  height: 90vh;
+}
+
+.login-form .login-icon, .signup-form .signup-icon {
+  transform: translate(100%, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form .signup-icon {
+  transform: translate(70%, 3rem);
+}
+
+.login-form span, .signup-form span {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.login-container .login-form .close-icon button, 
+.signup-container .signup-form .close-icon button {
+  background: inherit;
+  border: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.login-container .login-form .close-icon button:focus,
+.signup-container .signup-form .close-icon button:focus {
+  outline: none;
+}
+
+.login-form input, .signup-form input {
+  margin-top: 2rem;
+  display: inline;
+  padding: .5rem 7rem .5rem 0;
+  border: none;
+  border-bottom: 2px solid #000000;
+  background: inherit;
+  margin-left: 1rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+#login-email {
+  margin-top: 6rem;
+}
+
+#first-name {
+  margin-top: 5rem;
+}
+
+.login-form input:focus, .signup-form input:focus {
+  outline: none;
+  background-color: inherit;
+  color: white;
+}
+
+.login-form input::placeholder,
+.signup-form input::placeholder {
+  font-size: 1.25rem;
+}
+
+.login-container .login-form a,
+.signup-container .signup-form a {
+  align-self: center;
+  color: #FF0FA8;
+}
+
+.signup-container .signup-form a {
+  margin-top: 1rem;
+}
+
+.login-container .login-form .forgot-link {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+.login-form button[type="submit"],
+.signup-form button[type="submit"] {
+  background: #00BFA6;
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  padding: 0.5rem 2rem;
+  align-self: center;
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+
+.signup-form button[type="submit"] {
+  margin-top: 1rem;
+}
+
+.login-form button[type="submit"]:focus,
+.signup-form button[type="submit"]:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #000000; 
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3F3D56; 
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1c2e;
+  visibility: visible;
 }
