@@ -223,33 +223,34 @@
   }
 
   .login-form input, .signup-form input {
-    margin-top: 2rem;
-    display: inline;
     padding: .5rem 3rem .5rem 0;
-    border: none;
-    border-bottom: 2px solid #000000;
-    background: inherit;
-    margin-left: 1rem;
-    color: #ffffff;
-    font-size: 1.25rem;
-  }
-
-  .login-form button[type="submit"],
-  .signup-form button[type="submit"] {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
   }
 
   .login-form input, .signup-form input {
-    margin-top: 2rem;
-    display: inline;
     padding: .5rem 1rem .5rem 0;
-    border: none;
-    border-bottom: 2px solid #000000;
-    background: inherit;
-    margin-left: 1rem;
-    color: #f00fff;
-    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .login-form {
+    width: 100vw;
+    height: 80vh;
   }
 
+  .signup-form {
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .login-form .login-icon {
+    transform: translate(60%, 3rem);
+  }
+
+  .signup-form .signup-icon {
+    transform: translate(35%, 3rem);
+  }
+
+  .login-form input, .signup-form input {
+    padding: .5rem 0 .5rem 0;
+  }
 }
