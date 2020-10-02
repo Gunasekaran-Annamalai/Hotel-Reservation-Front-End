@@ -46,6 +46,10 @@
   }
 }
 
+.menu-btn {
+  display: none;
+}
+
 .link {
   display: flex;
   justify-content: space-evenly;
@@ -111,7 +115,7 @@
   position: absolute;
   top: 32.5rem;
   left: 15rem;
-  background: #3F3D56;
+  background: #3F3D56;  
   padding: .7rem 2.5rem;
   border: none;
   border-radius: 2rem;
@@ -119,6 +123,7 @@
   font-weight: bolder;
   color: white;
   cursor: pointer;
+  outline: none;
 }
 
 .have .title {

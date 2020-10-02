@@ -6,8 +6,10 @@
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
   <title>Hotel Reservation</title>
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/mobile-index.css">
   <script src="./javascript/slider.js" defer></script>
   <script src="./javascript/popup.js" defer></script>
+  <script src="./javascript/menu.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -15,13 +17,16 @@
       <div class="title">
         <h1><a href="#">PARADOR</a></h1>
       </div>
+      <div class="menu-btn">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+      </div>
       <div class="link">
         <a href="#" id='login'>Login</a>
         <a href="#" id='signup'>Sign Up</a>
       </div>
     </nav>
     <div class="main">
-      <div class="description">
+      <div class="description" id="main-description">
         <h1 class="title">The Orchid</h1>
         <h2 class="note">We aim to redefine a new dimension of luxury and relaxation.</h2>
         <button class="btn" id="btn-1">Take a look</button>
@@ -108,7 +113,7 @@
     </div>
   </div>
   <div class="footer">
-    <div>
+    <div class="section-1">
       <div class="icons">
         <a href="#">
           <svg id="iconfinder_2_social_2609552" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 89.042 89.042">
@@ -149,7 +154,7 @@
         <p>phone: 044-21242143</p>
       </div>
     </div>
-    <div>
+    <div class="section-2">
       <div class="for-you">
         <h3>For You:</h3>
         <a href="#">click for complains</a>

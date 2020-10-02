@@ -1,0 +1,206 @@
+@media(max-width: 749px)
+{
+  .container {
+    width: 100vw;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation .title {
+    animation-play-state: paused;
+    font-size: 1rem;
+    margin-left: 1.2rem;
+  }
+
+  .menu-btn {
+    display: inline;
+    position: absolute;
+    right: 1rem;
+  }
+
+  .link {
+    width: 100%;
+    position: absolute;
+    top: 3.75rem;
+    justify-content: space-around;
+    display: none;
+    transition: 2s ease-in-out;
+  }
+
+  .link a:nth-child(1) {
+    margin-left: 1rem;
+  }
+
+  .link a:nth-child(2) {
+    background: #1BA391;
+    padding: .2rem .5rem;
+    border-radius: .7rem;
+    margin-right: 1rem;
+  }
+
+  .link.display-menu {
+    display: flex;
+    transition: 2s ease-in-out;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main .description {
+    margin-top: 2rem;
+  }
+
+  .main .description.move-down {
+    margin-top: 3.5rem;
+  }
+
+  .main .description .title {
+    font-size: 2.5rem;
+  }
+
+  .main .description .note {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .main .illustration {
+    display: none;
+  }
+
+  .main .illustration svg {
+    width: 100px!important;
+    height: 100px!important;
+  }
+
+  .main .description .btn {
+    top: 12rem;
+    left: 5rem;
+  }
+
+  .have {
+    margin-top: 5rem;
+  }
+
+  .have .description {
+    grid-template-columns: 1fr;
+    grid-gap: .75rem;
+  }
+   
+  .have .section-title {
+    font-size: 2.5rem;
+  }
+
+  .have .section-note {
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  .have .carousel {
+    width: 90vw;
+    height: 30vh;
+    margin: 0 auto;
+  }
+
+  .provide {
+    margin-top: .75rem;
+  }
+
+  .provide .content {
+    grid-template-columns: repeat(1, .9fr);
+    grid-gap: .5rem;
+  }
+
+  .provide .content div {
+    box-shadow: .5px .5px 10px .5px rgb(0, 0, 0);
+  }
+
+  .location .slider {
+    width: 90vw;
+    height: 30vh;
+    margin: 0 auto;
+  }
+
+  .location .slider h1 {
+    font-size: 2.5rem;
+    bottom: 6.5rem;
+  }
+
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100vw;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  .footer .section-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer .icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .icons svg {
+    margin: 2rem 0 0 0;
+  }
+
+  .footer .contact {
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer .for-you {
+    text-align: center;
+  }
+
+  .greet {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .login-form {
+    width: 90vw;
+    height: 75vh;
+  }
+
+  .signup-form {
+    width: 90vw;
+    height: 85vh;
+  }
+
+  .login-form .login-icon {
+    transform: translate(75%, 3rem);
+  }
+
+  .signup-form .signup-icon {
+    transform: translate(60%, 3rem);
+  }
+
+  .login-form input, .signup-form input {
+    margin-top: 2rem;
+    display: inline;
+    padding: .5rem 3.5rem .5rem 0;
+    border: none;
+    border-bottom: 2px solid #000000;
+    background: inherit;
+    margin-left: 1rem;
+    color: #ffffff;
+    font-size: 1.25rem;
+  }
+
+  .login-form button[type="submit"],
+.signup-form button[type="submit"] {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+
+}
